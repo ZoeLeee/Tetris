@@ -3,8 +3,8 @@ import { Object3D, Vector3 } from 'Three';
 
 
 export class View{
-  private SCREEN_WIDTH = window.innerWidth;
-  private SCREEN_HEIGHT = window.innerHeight;
+  private SCREEN_WIDTH = 480;
+  private SCREEN_HEIGHT = 960;
   private frustumSize = 600;
   private scene=new THREE.Scene();
   private camera:THREE.OrthographicCamera;
