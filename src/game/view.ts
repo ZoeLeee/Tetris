@@ -1,5 +1,5 @@
-import * as THREE from 'Three'; 
-import { Object3D, Vector3 } from 'Three';
+import * as THREE from 'three'; 
+import { Object3D, Vector3 } from 'three';
 
 
 export class View{

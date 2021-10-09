@@ -1,4 +1,4 @@
-import { Vector3, CubeGeometry, Mesh, MeshBasicMaterial, BoxGeometry } from "Three";
+import { Vector3, CubeGeometry, Mesh, MeshBasicMaterial, BoxGeometry } from "three";
 
 export class Cell{
   private pos:Vector3=new Vector3(-66,228);

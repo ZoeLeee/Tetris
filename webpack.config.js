@@ -8,6 +8,7 @@ function getpath(fileName)
 }
 
 module.exports = {
+    mode:"development",
     entry: __dirname + "/src/index.ts",
     output: {
         filename: "bundle.js",
@@ -23,14 +24,7 @@ module.exports = {
 
     module: {
         rules: [
-            // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
-            { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
-            {
-                test: /\.(png|jpg)$/,
-                loader: 'url-loader?limit=8192'
-            },
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+            { test: /\.tsx?$/, loader: "babel-loader" },
             {
                 test: /\.css$/,
                 use: [
@@ -44,14 +38,10 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: "./dist/",//本地服务器所加载的页面所在的目录
-        historyApiFallback: true,//不跳转
-        inline: true,//实时刷新
-        port: "9527"
+        port: 9527
     },
     plugins: [
-
-        new HtmlWebPackPlugin({ title: "webCAD", template: "./index.html" }),
+        new HtmlWebPackPlugin({ title: "俄罗斯方块", template: "./index.html" }),
         new webpack.ProvidePlugin({
             ReactDOM: 'react-dom',
             React: 'react',

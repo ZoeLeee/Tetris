@@ -1,5 +1,5 @@
 import { Cell } from "./Cell";
-import { Group, Vector3 } from "Three";
+import { Group, Vector3 } from "three";
 
 export class Shape{
   private cells:Group;
